@@ -1,7 +1,6 @@
 package linkedlist.main;
 
 import linkedlist.models.LinkedList;
-import linkedlist.models.ListNode;
 
 public class LinkedListMain {
 

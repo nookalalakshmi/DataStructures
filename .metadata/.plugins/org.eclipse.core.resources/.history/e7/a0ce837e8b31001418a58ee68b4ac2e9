@@ -28,7 +28,7 @@ public class LinkedList {
 		
 		if(head == null)
 		{
-			setHead(newNode);
+			insertHead(data);
 			return true;
 		}
 		
@@ -64,7 +64,7 @@ public class LinkedList {
 		
 		if(head == null)
 		{
-			setHead(newNode);
+			insertHead(data);
 			return true;
 		}
 		else 

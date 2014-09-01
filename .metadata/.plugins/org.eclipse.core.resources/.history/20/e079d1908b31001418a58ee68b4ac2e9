@@ -1,7 +1,6 @@
 package linkedlist.main;
 
 import linkedlist.models.LinkedList;
-import linkedlist.models.ListNode;
 
 public class LinkedListMain {
 
@@ -11,7 +10,7 @@ public class LinkedListMain {
 	public static void main(String[] args) {
 		
 		LinkedList list = new LinkedList();
-		list.setHead(new ListNode(0));
+		list.insertHead(0);
 		list.insertBeforeNode(10,0);
 		list.insertAfterNode(20, 10);
 		list.insertBeforeNode(30, 10);
