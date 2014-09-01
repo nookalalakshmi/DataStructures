@@ -1,0 +1,81 @@
+package LinkedListInsertionController;
+
+import linkedlist.models.ListNode;
+
+public class LinkedListInsert {
+	
+	private ListNode head;
+	
+	public LinkedListInsert(ListNode head) {
+	
+		this.head = head;
+	}
+	
+	public boolean insertBeforeNode(int data, int before)
+	{
+		ListNode newNode = new ListNode(data);
+		
+		ListNode temp =  this.head;
+		
+		if(head == null)
+		{
+			setHead(newNode);
+			return true;
+		}
+		
+		else if(before == head.getData())
+		{
+			newNode.setNext(head);
+			head = newNode;
+			return true;
+		}
+		else
+		{
+			while(temp.getNext() != null)
+			{
+				if(temp.getNext().getData() == before)
+				{
+					newNode.setNext(temp.getNext());
+					temp.setNext(newNode);
+					return true;
+				}
+				else
+				{
+					temp = temp.getNext();
+				}
+			}
+			return false;
+		}
+	}
+	
+	public boolean insertAfterNode(int data, int after)
+	{
+		ListNode newNode = new ListNode(data);
+		ListNode temp  = head;
+		
+		if(head == null)
+		{
+			setHead(newNode);
+			return true;
+		}
+		else 
+		{
+			while(temp != null)
+			{
+				if(temp.getData() == after)
+				{
+					newNode.setNext(temp.getNext());
+					temp.setNext(newNode);
+					return true;
+				}
+				else
+				{
+					temp = temp.getNext();
+				}
+			}
+		}
+		return false;
+	}
+
+
+}

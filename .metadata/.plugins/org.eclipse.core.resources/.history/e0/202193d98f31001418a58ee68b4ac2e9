@@ -14,6 +14,6 @@ public class LinkedListMain {
 		listInsert.insertBeforeNode(10,0);
 		listInsert.insertAfterNode(20, 10);
 		listInsert.insertBeforeNode(30, 10);
-		listInsert.printList();
+		list.printList();
 	}
 }

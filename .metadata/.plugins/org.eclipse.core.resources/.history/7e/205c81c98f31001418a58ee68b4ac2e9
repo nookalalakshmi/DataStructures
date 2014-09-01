@@ -19,4 +19,15 @@ public class LinkedList {
 	public void setHead(ListNode head) {
 		this.head = head;
 	}
+	
+	public void printList()
+	{
+		ListNode temp  = head;
+		
+		while(temp != null)
+		{
+			System.out.println("Node data : "+temp.getData());
+			temp = temp.getNext();
+		}
+	}
 }
