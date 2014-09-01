@@ -1,0 +1,71 @@
+package linkedlist.models;
+
+import java.util.ArrayList;
+
+public class LinkedList {
+	
+	private ArrayList<ListNode> list;
+	private ListNode head;
+
+	public ArrayList<ListNode> getList() {
+		return list;
+	}
+	public void setList(ArrayList<ListNode> list) {
+		this.list = list;
+	}
+	public ListNode getHead() {
+		return head;
+	}
+	public void setHead(ListNode head) {
+		this.head = head;
+	}
+
+	public boolean insertBeforeNode(int data, int before)
+	{
+		ListNode newNode = new ListNode(data);
+		
+		ListNode temp =  this.head;
+		
+		if(before == head.getData())
+		{
+			ListNode n = new ListNode(data);
+			n.setNext(head);
+			head = n;
+			return true;
+		}
+		else
+		{
+			while(temp.getNext() != null)
+			{
+				if(temp.getNext().getData() == before)
+				{
+					ListNode n = new ListNode(data);
+					n.setNext(temp.getNext());
+					temp.setNext(n);
+				}
+				else
+				{
+					temp = temp.getNext();
+				}
+			}
+		}
+			
+	}
+	
+	public ListNode insertAfterNode(int data)
+	{
+		return null;
+	}
+	
+	public void printList()
+	{
+		ListNode temp  = head;
+		
+		while(temp != null)
+		{
+			System.out.println("Node data : "+temp.getData());
+			temp = temp.getNext();
+		}
+	}
+
+}

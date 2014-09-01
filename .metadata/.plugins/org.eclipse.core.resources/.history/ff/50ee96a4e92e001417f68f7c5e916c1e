@@ -1,0 +1,20 @@
+package linkedlist.main;
+
+import linkedlist.models.LinkedList;
+import linkedlist.models.ListNode;
+
+public class LinkedListMain {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		LinkedList list = new LinkedList();
+		list.insertNodeInFront(0);
+		
+		
+		list.printList();
+	}
+
+}
