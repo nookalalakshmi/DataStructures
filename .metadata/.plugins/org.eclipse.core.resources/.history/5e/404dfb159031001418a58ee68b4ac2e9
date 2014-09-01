@@ -1,6 +1,6 @@
 package linkedlist.main;
 
-import linkedlist.controllers.LinkedListOperations;
+import LinkedListInsertionController.LinkedListOperations;
 import linkedlist.models.LinkedList;
 import linkedlist.models.ListNode;
 
